@@ -1,8 +1,79 @@
-<html>
-  <head>
-    <title>My Page 1</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校園運動空間議題</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      background: #eef6ff;
+    }
+    .details {
+      display: none;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>校園運動空間規劃的挑戰與創新</h1>
+  </header>
+  <main>
+    <p>隨著運動風氣興起，校園運動空間的不足與規劃不當成為許多學生關心的議題。我們從棒球、法式滾球與足球三個角度，探討當前的困境與潛在的改善方式。</p>
+
+    <div class="card" onclick="toggleDetails('baseball')">
+      <h3>⚾ 棒球場地不足</h3>
+      <div class="details" id="baseball">
+        <p>學生李喻哲表示，校內難找到可用空間，常被沒收球具。即使校外場地也多為比賽使用，造成練習空間極度受限。</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDetails('petanque')">
+      <h3>🏐 法式滾球場地困境</h3>
+      <div class="details" id="petanque">
+        <p>虎尾高中滾球社使用臨時搭建場地，地面凹凸不平、雜草叢生，影響練習與比賽表現。</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDetails('soccer')">
+      <h3>⚽ 足球練習與安全問題</h3>
+      <div class="details" id="soccer">
+        <p>李秉諾回憶，多年來訓練需自備球門、場地設限。水泥地更在雨天造成高度受傷風險。</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleDetails(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
 </html>
